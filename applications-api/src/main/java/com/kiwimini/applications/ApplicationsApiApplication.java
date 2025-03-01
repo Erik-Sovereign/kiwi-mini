@@ -1,13 +1,13 @@
-package com.teamapplicationmini.simulators.applications;
+package com.kiwimini.applications;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApplicationsSimulatorApplication {
+public class ApplicationsApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApplicationsSimulatorApplication.class, args);
+        SpringApplication.run(ApplicationsApiApplication.class, args);
     }
 
 }

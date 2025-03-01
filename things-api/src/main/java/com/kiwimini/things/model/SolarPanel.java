@@ -1,4 +1,4 @@
-package com.teamapplicationmini.things.model;
+package com.kiwimini.things.model;
 
 public record SolarPanel(String id, String name, int generationPerHour) {
 }

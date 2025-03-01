@@ -1,13 +1,13 @@
-package com.teamapplicationmini.simulators.things;
+package com.kiwimini.simulators.applications;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ThingsSimulatorApplication {
+public class ApplicationsSimulatorApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ThingsSimulatorApplication.class, args);
+        SpringApplication.run(ApplicationsSimulatorApplication.class, args);
     }
 
 }

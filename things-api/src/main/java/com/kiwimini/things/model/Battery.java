@@ -1,4 +1,4 @@
-package com.teamapplicationmini.things.model;
+package com.kiwimini.things.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

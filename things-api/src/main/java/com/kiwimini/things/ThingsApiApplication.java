@@ -1,4 +1,4 @@
-package com.teamapplicationmini.things;
+package com.kiwimini.things;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
