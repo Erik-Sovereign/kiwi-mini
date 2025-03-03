@@ -1,13 +1,13 @@
-package com.kiwimini.applications;
+package com.kiwimini.thingsapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApplicationsApiApplication {
+public class ThingsApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApplicationsApiApplication.class, args);
+        SpringApplication.run(ThingsApiApplication.class, args);
     }
 
 }

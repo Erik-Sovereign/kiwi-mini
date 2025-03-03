@@ -1,0 +1,9 @@
+{
+    "properties": [
+        {
+            "name": "things-api.base-url",
+            "type": "java.lang.String",
+            "description": "things-api.base-url"
+        }
+    ]
+}

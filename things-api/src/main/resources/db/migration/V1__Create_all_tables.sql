@@ -1,5 +1,16 @@
 CREATE TABLE batteries (
-    id VARCHAR(36) PRIMARY KEY,
+    id UUID PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     energy_input_per_hour INT NOT NULL CHECK (energy_input_per_hour > 0)
+);
+CREATE TABLE chargers (
+    id UUID PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    energy_input_per_hour INT NOT NULL CHECK (energy_input_per_hour > 0),
+    is_charging BOOLEAN NOT NULL
+);
+CREATE TABLE solarpanels (
+    id UUID PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    energy_output_per_hour INT NOT NULL CHECK (energy_output_per_hour > 0)
 )
