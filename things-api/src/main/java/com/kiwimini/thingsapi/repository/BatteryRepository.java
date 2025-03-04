@@ -5,8 +5,8 @@ import java.util.UUID;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.kiwimini.sharedmodels.model.Battery;
+import com.kiwimini.thingsapi.model.BatteryEntity;
 
-@RepositoryRestResource(path = "batteries")
-public interface BatteryRepository extends CrudRepository<Battery, UUID> {
+@RepositoryRestResource(path = "batteries", collectionResourceRel = "batteries")
+public interface BatteryRepository extends CrudRepository<BatteryEntity, UUID> {
 }

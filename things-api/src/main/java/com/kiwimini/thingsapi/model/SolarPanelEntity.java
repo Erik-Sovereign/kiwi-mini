@@ -1,14 +1,13 @@
 package com.kiwimini.thingsapi.model;
 
-import com.kiwimini.sharedmodels.model.Battery;
+import com.kiwimini.sharedmodels.model.SolarPanel;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "batteries")
+@Table(name = "solarpanels")
 @NoArgsConstructor
-public class BatteryEntity extends Battery {
-
+public class SolarPanelEntity extends SolarPanel {
 }

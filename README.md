@@ -1,10 +1,40 @@
-# Plan
-0. API entwickeln ✅
-1. Things Datenbank bauen mit Mock Batterien etc. ✅
-2. API bauen, die Things hinzufügen kann (Team Things Seite) ✅
-4. API bauen, die Informationen aus Things API abrufen, verarbeiten und weitergeben kann (Team Applications API) -> Ich gehe davon aus, dass es die Applications API für eine Wohnung ist, die entweder 0/1 Batterien, Charger und Solarpanel hat
-    1. Die Simulatoren können also entweder eine vorhande Batter/charger/solaparnal hinzufügen löschen oder updaten
-    2. Eine ApplicationsAPI bauen, die die Strombilanz des Hauses zurückgibt
-    3. Eine ApplicationsAPI bauen, die den charging status ändert, falls ein charger vorhanden ists
-5. Irgendetwas bauen, dass die Applications API zufällig abruft, um Informationen zu bekommen, oder sowas wie einen Charging Status zu ändern
-6. Irgendetwas bauen, dass die Things API zufällig aufruft und Dinge hinzufügt, bearbeitet oder löscht
+# Installation
+Im Root Ordner:
+`./mvnw clean install`
+
+```
+cd shared-models
+../mvnw clean install
+```
+
+# Start und Tests
+`./mvnw spring-boot:run -pl things-api`
+Startet auf Port 8080
+`./mvnw spring-boot:run -pl applications-api`
+Startet auf Port 8081
+
+## Beispieltests
+```
+# Füge ersten Charger hinzu (Tesla Wall Connector)
+curl -X POST http://localhost:8080/things-api/chargers -H "Content-Type: application/json" -d '{     
+  "name": "Tesla Wall Connector",
+  "energyInputPerHour": 11000,
+  "charging": true
+}'
+
+# Füge zweiten Charger hinzu (Heidelberg Energy Control)
+curl -X POST http://localhost:8080/things-api/chargers -H "Content-Type: application/json" -d '{
+  "name": "Heidelberg Energy Control",
+  "energyInputPerHour": 7500,
+  "charging": false
+}'
+
+# Füge Solar Panel hinzu
+curl -X POST http://localhost:8080/things-api/solarpanels -H "Content-Type: application/json" -d '{
+  "name": "Dachanlage Süd",
+  "energyOutputPerHour": 15000
+}'
+```
+`curl http://localhost:8081/api/energy/balance  `
+
+`curl -X PUT http://localhost:8081/api/chargers/7c1d9a99-c435-42e3-a95d-55fe6522e787/charging -H "Content-Type: application/json" -d '{"charging": true}'`

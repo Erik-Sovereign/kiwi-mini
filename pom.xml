@@ -37,7 +37,6 @@
 	<modules>
 		<module>things-api</module>
 		<module>applications-api</module>
-		<!-- <module>simulators</module> -->
 	</modules>
 
 	<dependencies>
